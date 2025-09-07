@@ -34,8 +34,7 @@
 
 .small .image {
   @media screen and (min-width: 1024px) {
-    width: calc((100% - 32px * 2) / 3);
-    height: auto;
+    height: 240px;
   }
 }
 
