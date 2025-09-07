@@ -54,3 +54,13 @@ ol, ul {
   cursor: pointer;
 }
 
+.container {
+  max-width: 1074px;
+  margin: 0 auto;
+  padding: 0 16px;
+  box-sizing: border-box;
+
+  @media screen and (min-width: 1024px) {
+    padding: 0;
+  }
+}

@@ -1,0 +1,152 @@
+.hero-section {
+  margin: 16px 0 18px 0;
+}
+
+.breadcrumbs {
+  margin-bottom: 24px;
+
+  @media screen and (min-width: 1024px) {
+    margin-bottom: 48px;
+  }
+}
+
+.breadcrumbs, .breadcrumb {
+  display: flex;  
+  align-items: center;  
+
+  @media screen and (min-width: 1024px) {
+    gap: 8px;
+  }
+}
+
+.breadcrumb {
+  flex-direction: row-reverse;
+  
+  @media screen and (min-width: 1024px) {
+    flex-direction: row;
+  }
+}
+
+.breadcrumb:last-child {
+  display: none;
+
+  @media screen and (min-width: 1024px) {
+    display: flex;
+  }
+}
+
+.breadcrumb-link {
+  font-weight: 500;
+  line-height: 1.5;
+  color: #91A0B6;
+
+  @media screen and (min-width: 1024px) {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+
+.breadcrumb-icon {
+  color: #91A0B6;
+  transform: rotate(180deg);
+
+  @media screen and (min-width: 1024px) {
+    transform: rotate(0deg);
+    color: #D8E1ED;
+  }  
+}
+
+.card {
+  position: relative;
+  padding: 16px;
+  border-radius: 16px;
+  background-color: rgba(4, 191, 148, 0.16);
+
+  @media screen and (min-width: 1024px) {
+    padding: 56px;
+  }
+}
+
+.card-title {
+  margin: 0 0 8px 0;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 1.5;
+  color: #04BF94;
+
+  @media screen and (min-width: 1024px) {
+    font-size: 32px;
+  }
+}
+
+.card-subtitle {
+  margin: 0 0 16px 0;
+  font-weight: 700;
+  font-size: 18px;
+  color: #242424;
+}
+
+.middle {
+  font-weight: 500;  
+}
+
+.search-wrapper {
+  position: relative;
+  
+  @media screen and (min-width: 1024px) {   
+    width: 522px;
+  }
+}
+
+.search-wrapper svg {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 24px;
+  height: 24px;
+
+  @media screen and (min-width: 1024px) {
+    top: 16px;
+    right: 16px;
+  }
+}
+
+.search-input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px 40px 10px 16px;
+  border: none;
+  border-radius: 12px;
+  font-size: 14px;
+  line-height: 1.43;
+  color: #262626;
+  outline: none;
+
+  @media screen and (min-width: 1024px) {   
+    padding: 16px;
+    padding-right: 56px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+
+.search-input::placeholder {
+  color: #91A0B6;
+}
+
+.search-input:focus {
+  border: 1px solid #04BF94;
+}
+
+.card-image {
+  display: none;
+
+  @media screen and (min-width: 1024px) {   
+    position: absolute;
+    top: 8px;
+    right: 0;
+    display: block;
+    width: 379px;
+    height: 259px;
+  }  
+}
