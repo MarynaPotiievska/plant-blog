@@ -34,6 +34,10 @@ h1, h2, h3, h4, h5, h6, p {
   margin: 0;
 }
 
+section:last-child {
+  margin-bottom: 0;
+}
+
 .desktop {
   display: none;
 
@@ -64,7 +68,7 @@ h1, h2, h3, h4, h5, h6, p {
   padding: 0 16px;
   box-sizing: border-box;
 
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1280px) {
     padding: 0;
   }
 }
