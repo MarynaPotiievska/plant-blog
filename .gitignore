@@ -1,0 +1,20 @@
+# root
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# frontend
+/frontend/node_modules/
+/frontend/build/
+
+# backend
+/backend/node_modules/
+/backend/dist/
+
+# common system files
+.DS_Store
+*.local
+
+# all node_modules in any subdirectory
+**/node_modules/

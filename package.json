@@ -1,0 +1,13 @@
+{
+  "name": "plant-blog",
+  "version": "1.0.0",
+  "scripts": {
+    "server": "npm --prefix backend start",
+    "client": "npm --prefix frontend start",
+    "build": "cd frontend && npm install && npm run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
