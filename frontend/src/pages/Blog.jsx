@@ -4,14 +4,16 @@ import { TopOfTheDaySection } from "../components/TopOfTheDaySection/TopOfTheDay
 import { InterestingSection } from "../components/InterestingSection/InterestingSection";
 import { Footer } from "../components/Footer/Footer";
 
+import { useGetTemperature } from "../hooks/useGetTemperature";
 
+function Blog() {
+  const temperatureData = useGetTemperature();
 
-function Blog() {  
   return (
     <>
       <Header />
       <main>
-        <HeroSection />
+        <HeroSection {...temperatureData} />
         <TopOfTheDaySection />
         <InterestingSection />
       </main>
