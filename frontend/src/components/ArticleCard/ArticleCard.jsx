@@ -1,12 +1,12 @@
 import styles from "./ArticleCard.module.css";
 
-import { formatDate } from "../../utils/formateDate";
+import { formatDate } from "../../utils";
 
 export function ArticleCard({ card, size }) {
   const { image, title, annotation, date, readingTime } = card;
 
   return (
-    <div className={`${styles.card} ${size ? styles[size] : ""}`}>
+    <a href="/" className={`${styles.card} ${size ? styles[size] : ""}`}>
       <img src={image} alt={title} className={styles.image} />
       <div className={styles.content}>
         <div className={styles.meta}>
@@ -17,6 +17,6 @@ export function ArticleCard({ card, size }) {
         <h3 className={styles.title}>{title}</h3>
         <p className={styles.description}>{annotation}</p>
       </div>
-    </div>
+    </a>
   );
 }
