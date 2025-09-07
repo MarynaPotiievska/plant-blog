@@ -1,0 +1,72 @@
+.footer {  
+  padding: 96px 0 16px 0;  
+}
+
+.footer > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+
+  @media screen and (min-width: 1024px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+  }
+}
+
+.list, .text {
+  text-align: center;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  @media screen and (min-width: 1024px) {
+    flex-direction: row;    
+    align-items: center;
+    gap: 49px;
+  }
+}
+
+.list li:not(:last-child) {
+  position: relative;
+}
+
+.list li:not(:last-child)::after {
+
+  @media screen and (min-width: 1024px) {
+    content: "";
+    position: absolute;
+    top: 2px;
+    right: -24px;
+    width: 1px;
+    height: 16px;
+    background-color: #91A0B6;
+  }
+}
+
+.link, .text {
+  color: #91A0B6;
+  font-size: 16px;
+  line-height: 1.5;
+
+  @media screen and (min-width: 1024px) {
+    font-size: 14px;
+    line-height: 1.43;    
+  }
+}
+
+.link {
+  display: block;
+}
+
+.text {
+  @media screen and (max-width: 480px) {
+    max-width: 215px;
+    margin: 0 auto;
+  }
+}
