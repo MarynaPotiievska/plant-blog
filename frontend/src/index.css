@@ -38,6 +38,11 @@ section:last-child {
   margin-bottom: 0;
 }
 
+.logo {
+  width: 107px;
+  height: 24px;
+}
+
 .desktop {
   display: none;
 

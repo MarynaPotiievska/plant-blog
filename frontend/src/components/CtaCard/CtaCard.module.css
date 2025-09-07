@@ -1,0 +1,74 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+  border-radius: 16px;
+  background-color: rgba(4, 191, 148, 0.16);
+
+  @media screen and (min-width: 1024px) {
+    gap: 24px;
+    padding: 24px;    
+  }
+}
+
+.text-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.title {
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 1.5;
+  color: #04BF94;
+
+  @media screen and (min-width: 1024px) {
+    font-weight: 600;
+    font-size: 32px;    
+  }
+}
+
+.description {
+  max-width: 235px;
+  font-weight: 500;
+  font-size: 18px;
+  color: #242424;
+
+  @media screen and (min-width: 1024px) {
+    max-width: 100%;
+    font-size: 24px;  
+    color: #000000;  
+  }
+}
+
+.button {
+  width: 100%;box-sizing: border-box;
+  padding: 8px 32px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #FFFFFF;
+  background-color: #04BF94;
+
+   @media screen and (min-width: 1024px) {
+    width: fit-content; 
+  }
+}
+
+.image {
+  display: none;
+
+  @media screen and (min-width: 1024px) {
+    position: absolute;
+    top: -9px;
+    right: -15px;
+    display: block;
+    width: 336px;
+    height: 261px;
+  }
+}
