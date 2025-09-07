@@ -1,0 +1,24 @@
+.nav ul {
+  display: flex;
+  gap: 24px;
+  color: #262626;
+}
+
+.mobile ul {
+  flex-direction: column;
+}
+
+.link {  
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+a {
+  display: inline-block;
+  height: 100%;
+  color: #262626;
+}
+
+svg {
+  display: block;
+}
