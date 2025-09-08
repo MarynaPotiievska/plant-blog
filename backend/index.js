@@ -6,7 +6,7 @@ require("dotenv").config();
 const app = express();
 
 if (process.env.NODE_ENV === "development") {
-  app.use(cors({ origin: process.env.CLIENT_URL }));
+  app.use(cors({ origin: process.env.CLIENT_URL || "http://localhost:3000" }));
 }
 
 app.use(express.static(path.join(__dirname, "../frontend/build")));
