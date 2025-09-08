@@ -7,12 +7,6 @@
   padding: 16px;
   border-radius: 16px;
   background-color: rgba(4, 191, 148, 0.16);
-
-  @media screen and (min-width: 1024px) {
-    gap: 24px;
-    margin-bottom: 56px;
-    padding: 24px;    
-  }
 }
 
 .text-wrapper {
@@ -26,11 +20,6 @@
   font-size: 24px;
   line-height: 1.5;
   color: #04BF94;
-
-  @media screen and (min-width: 1024px) {
-    font-weight: 600;
-    font-size: 32px;    
-  }
 }
 
 .description {
@@ -38,12 +27,6 @@
   font-weight: 500;
   font-size: 18px;
   color: #242424;
-
-  @media screen and (min-width: 1024px) {
-    max-width: 100%;
-    font-size: 24px;  
-    color: #000000;  
-  }
 }
 
 .button {
@@ -55,11 +38,7 @@
   font-size: 16px;
   line-height: 1.5;
   color: #FFFFFF;
-  background-color: #04BF94;
-
-   @media screen and (min-width: 1024px) {
-    width: fit-content; 
-  }
+  background-color: #04BF94;  
 }
 
 .button:hover,
@@ -69,9 +48,32 @@
 }
 
 .image {
-  display: none;
+  display: none;  
+}
 
-  @media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
+  .card {
+    gap: 24px;
+    margin-bottom: 56px;
+    padding: 24px;    
+  }
+
+  .title {
+    font-weight: 600;
+    font-size: 32px;    
+  }
+
+  .description {
+    max-width: 100%;
+    font-size: 24px;  
+    color: #000000;  
+  }
+
+  .button {
+    width: fit-content;
+  }
+
+  .image {
     position: absolute;
     top: -9px;
     right: -15px;

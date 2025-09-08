@@ -1,9 +1,5 @@
 .section {
-  margin-bottom: 23px;
-
-  @media screen and (min-width: 1024px) {
-    margin-bottom: 56px; 
-  }
+  margin-bottom: 23px;  
 }
 
 .badge {
@@ -36,35 +32,36 @@
   flex-direction: column;
   gap: 24px;
   margin-bottom: 24px;
-
-  @media screen and (min-width: 1024px) {
-    margin-bottom: 56px;
-  }
-}
-
-.middle .list,
-.small .list,
-.skeletons {
-  @media screen and (min-width: 1024px) {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 32px;
-  }
-}
-
-.middle .list li {
-  @media screen and (min-width: 1024px) {
-    flex-basis: calc((100% - 32px) / 2);
-  }
-}
-
-.small .list li,
-.skeletons > div {
-  @media screen and (min-width: 1024px) {
-    flex-basis: calc((100% - 32px * 2) / 3);
-  }
 }
 
 .load-more-trigger {
   height: 10px;
+}
+
+@media screen and (min-width: 1024px) {
+  .section {
+    margin-bottom: 56px;
+  }
+
+  .list, 
+  .skeletons {
+    margin-bottom: 56px;
+  }
+
+  .middle .list,
+  .small .list,
+  .skeletons {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 32px;
+  }
+
+  .middle .list li {
+    flex-basis: calc((100% - 32px) / 2);
+  }
+
+  .small .list li,
+  .skeletons > div {
+    flex-basis: calc((100% - 32px * 2) / 3);
+  }
 }
