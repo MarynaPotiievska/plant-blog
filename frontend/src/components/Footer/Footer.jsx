@@ -20,7 +20,7 @@ export function Footer() {
           ))}
         </ul>
         <p className={styles.text}>
-          ©Copyright © 2020 PlantIn. All rights reserved.
+          ©Copyright © 2020 PlantIn. All rights reserved
         </p>
       </div>
     </footer>
