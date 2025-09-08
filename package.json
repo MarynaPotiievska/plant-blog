@@ -4,7 +4,8 @@
   "scripts": {
     "server": "npm --prefix backend start",
     "client": "npm --prefix frontend start",
-    "build": "cd frontend && npm install && npm run build"
+    "build": "cd frontend && npm install && npm run build",
+    "start": "cd backend && npm install && npm start"
   },
   "keywords": [],
   "author": "",
