@@ -1,11 +1,14 @@
-import { Fragment } from "react";
+import { Fragment, useEffect, useState } from "react";
 
 import styles from "./ArticleSection.module.css";
 
 import newBadge from "../../assets/images/new_badge.png";
 
 import { ArticleCard } from "../ArticleCard/ArticleCard";
+import { ArticleCardSkeleton } from "../ArticleCardSkeleton/ArticleCardSkeleton";
 import { CtaCard } from "../CtaCard/CtaCard";
+
+import { useInfiniteRows } from "../../hooks";
 
 import { generateRows } from "../../utils";
 
@@ -22,11 +25,13 @@ function renderArticlesRow(articles, size) {
 }
 
 export function ArticleSection({ category, articles, size, search }) {
+  const { rowsCount, loading, loadMoreRef } = useInfiniteRows();
+
   const isNewCategory = category === "New";
   const isInterestingCategory = category === "Interesting";
 
   const rowsToRender = isInterestingCategory
-    ? generateRows(articles, 4)
+    ? generateRows(articles, rowsCount)
     : [articles];
 
   const renderCtaIndex = rowsToRender.length > 2 ? 1 : 0;
@@ -47,6 +52,16 @@ export function ArticleSection({ category, articles, size, search }) {
             {isInterestingCategory && index === renderCtaIndex && <CtaCard />}
           </Fragment>
         ))}
+        {isInterestingCategory && loading && (
+          <div className={styles.skeletons}>
+            {[...Array(3)].map((_, idx) => (
+              <ArticleCardSkeleton key={idx} />
+            ))}
+          </div>
+        )}
+        {isInterestingCategory && (
+          <div ref={loadMoreRef} className={styles["load-more-trigger"]}></div>
+        )}
       </div>
     </section>
   );

@@ -10,9 +10,9 @@ export function ArticleCard({ card, size }) {
       <img src={image} alt={title} className={styles.image} />
       <div className={styles.content}>
         <div className={styles.meta}>
-          <span className={styles.date}>{formatDate(date)}</span>
+          <span>{formatDate(date)}</span>
           <span>·</span>
-          <span className={styles.readingTime}>{readingTime}</span>
+          <span>{readingTime}</span>
         </div>
         <h3 className={styles.title}>{title}</h3>
         <p className={styles.description}>{annotation}</p>

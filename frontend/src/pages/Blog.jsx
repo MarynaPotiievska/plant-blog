@@ -1,4 +1,4 @@
-import { Fragment } from "react/jsx-runtime";
+import { Fragment } from "react";
 
 import { Header } from "../components/Header/Header";
 import { HeroSection } from "../components/HeroSection/HeroSection";

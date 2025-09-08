@@ -30,7 +30,8 @@
   color: #91A0B6;
 }
 
-.list {
+.list, 
+.skeletons {
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -45,7 +46,8 @@
 }
 
 .middle .list,
-.small .list {
+.small .list,
+.skeletons {
   @media screen and (min-width: 1024px) {
     flex-direction: row;
     flex-wrap: wrap;
@@ -59,8 +61,13 @@
   }
 }
 
-.small .list li {
+.small .list li,
+.skeletons > div {
   @media screen and (min-width: 1024px) {
     flex-basis: calc((100% - 32px * 2) / 3);
   }
+}
+
+.load-more-trigger {
+  height: 10px;
 }
