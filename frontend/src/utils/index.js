@@ -1,4 +1,4 @@
 export * from "./formateDate";
 export * from "./generateRows";
-export * from "./groupByCategory";
+export * from "./getFilterAndGroupedArticles";
 export * from "./getSizeByCategory";

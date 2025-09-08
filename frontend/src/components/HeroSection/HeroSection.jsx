@@ -5,7 +5,8 @@ import heroImage from "../../assets/images/hero-image.png";
 import { ReactComponent as SearchIcon } from "../../assets/icons/input-search.svg";
 import { ReactComponent as ArrowIcon } from "../../assets/icons/chevron_left.svg";
 
-export function HeroSection({ temperature, loading, error }) {
+export function HeroSection({ temperatureData, handleSearch }) {
+  const { temperature, loading, error } = temperatureData;
   let temperatureValue = "";
   if (loading) {
     temperatureValue = "loading...";
@@ -51,6 +52,7 @@ export function HeroSection({ temperature, loading, error }) {
               type="text"
               placeholder="Search"
               className={styles["search-input"]}
+              onChange={(e) => handleSearch(e.target.value)}
             />
             <SearchIcon />
           </div>

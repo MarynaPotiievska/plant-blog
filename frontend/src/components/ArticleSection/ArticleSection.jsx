@@ -13,7 +13,7 @@ function renderArticlesRow(articles, size) {
   return (
     <ul className={styles.list}>
       {articles.map((article) => (
-        <li key={article.id}>
+        <li key={`${article.id}-${Math.random()}`}>
           <ArticleCard card={article} size={size === "middle" ? null : size} />
         </li>
       ))}
@@ -21,15 +21,15 @@ function renderArticlesRow(articles, size) {
   );
 }
 
-export function ArticleSection({ category, articles, size }) {
+export function ArticleSection({ category, articles, size, search }) {
   const isNewCategory = category === "New";
   const isInterestingCategory = category === "Interesting";
-  if (isInterestingCategory) {
-    console.log(generateRows(articles, 4));
-  }
+
   const rowsToRender = isInterestingCategory
     ? generateRows(articles, 4)
     : [articles];
+
+  const renderCtaIndex = rowsToRender.length > 2 ? 1 : 0;
 
   return (
     <section className={`${styles.section} ${styles[size]}`}>
@@ -44,7 +44,7 @@ export function ArticleSection({ category, articles, size }) {
         {rowsToRender.map((row, index) => (
           <Fragment key={index}>
             {renderArticlesRow(row, size)}
-            {isInterestingCategory && index === 1 && <CtaCard />}
+            {isInterestingCategory && index === renderCtaIndex && <CtaCard />}
           </Fragment>
         ))}
       </div>

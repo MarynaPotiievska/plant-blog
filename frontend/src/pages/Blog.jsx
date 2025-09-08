@@ -1,32 +1,44 @@
+import { Fragment } from "react/jsx-runtime";
+
 import { Header } from "../components/Header/Header";
 import { HeroSection } from "../components/HeroSection/HeroSection";
 import { ArticleSection } from "../components/ArticleSection/ArticleSection";
 import { Footer } from "../components/Footer/Footer";
 
-import { useGetTemperature } from "../hooks/useGetTemperature";
+import { useFilteredArticles, useGetTemperature } from "../hooks";
 
-import { groupByCategory, getSizeByCategory } from "../utils";
+import { getSizeByCategory } from "../utils";
 
 function Blog() {
   const temperatureData = useGetTemperature();
-  const articles = groupByCategory();
+  const { search, handleSearch, filteredArticles } = useFilteredArticles();
 
   return (
-    <>
+    <Fragment>
       <Header />
       <main>
-        <HeroSection {...temperatureData} />
-        {articles.map((group) => (
-          <ArticleSection
-            key={group.id}
-            category={group.title}
-            articles={group.articles}
-            size={getSizeByCategory(group.category)}
-          />
-        ))}
+        <HeroSection
+          temperatureData={temperatureData}
+          handleSearch={handleSearch}
+        />
+        {filteredArticles.length > 0 ? (
+          filteredArticles.map((group) => (
+            <ArticleSection
+              key={group.id}
+              category={group.title}
+              articles={group.articles}
+              size={getSizeByCategory(group.category)}
+              search={search}
+            />
+          ))
+        ) : (
+          <p style={{ textAlign: "center", marginTop: "20px" }}>
+            No articles found
+          </p>
+        )}
       </main>
       <Footer />
-    </>
+    </Fragment>
   );
 }
 
