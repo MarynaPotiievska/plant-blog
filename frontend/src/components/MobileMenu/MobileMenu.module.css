@@ -13,4 +13,6 @@
   height: calc(100vh - 64px);
   box-sizing: border-box;
   padding: 16px 8px;
+  background-color: #FFFFFF;
+  z-index: 10;
 }

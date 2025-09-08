@@ -13,7 +13,7 @@ export function Header() {
     <header className={styles.header}>
       <div className={styles["nav-wrapper"]}>
         <a href="/">
-          <img src={logo} alt="logo" className={styles.logo} />
+          <img src={logo} alt="logo" className="logo" />
         </a>
         <NavBar type={"desktop"} />
       </div>

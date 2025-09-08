@@ -35,9 +35,6 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
-}
-
-.list:not(:last-child) {
   margin-bottom: 24px;
 
   @media screen and (min-width: 1024px) {

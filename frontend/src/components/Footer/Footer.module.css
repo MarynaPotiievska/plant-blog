@@ -1,5 +1,9 @@
 .footer {  
-  padding: 96px 0 16px 0;  
+  padding: 72px 0 16px 0; 
+  
+  @media screen and (min-width: 1024px) {
+    padding-top: 44px;
+  }
 }
 
 .footer > div {

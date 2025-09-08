@@ -15,11 +15,6 @@
   gap: 44px;
 }
 
-.logo {
-  width: 107px;
-  height: 24px;
-}
-
 .buttons-wrapper {
   display: flex;
   gap: 16px;

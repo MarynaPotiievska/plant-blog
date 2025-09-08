@@ -1,5 +1,9 @@
 .hero-section {
   margin: 16px 0 18px 0;
+
+  @media screen and (min-width: 1024px) {
+    margin: 0 0 48px 0;
+  }
 }
 
 .breadcrumbs {
@@ -75,7 +79,7 @@
 }
 
 .card-title {
-  margin: 0 0 8px 0;
+  margin-bottom: 8px;
   font-weight: 800;
   font-size: 24px;
   line-height: 1.5;
@@ -87,7 +91,7 @@
 }
 
 .card-subtitle {
-  margin: 0 0 16px 0;
+  margin-bottom: 16px;
   font-weight: 700;
   font-size: 18px;
   color: #242424;
