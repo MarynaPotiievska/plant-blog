@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 
+const API_URL = process.env.REACT_APP_API_URL || "http://localhost:3001/api";
+
 export function useGetTemperature() {
   const [temperature, setTemperature] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -8,7 +10,7 @@ export function useGetTemperature() {
   useEffect(() => {
     async function fetchRandom() {
       try {
-        const resp = await fetch("http://localhost:3001/api/temperature");
+        const resp = await fetch(`${API_URL}/temperature`);
         if (!resp.ok) {
           throw new Error("Server error " + resp.status);
         }

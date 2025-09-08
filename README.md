@@ -39,7 +39,7 @@ cd plant-blog
 
 ### 2. Environment variables
 
-Before running the project, create a `.env` file in the backend root directory (e.g. `./backend/.env`) based on `.env.example`.  
+Before running the project, create `.env` files in both the backend and frontend root directories (e.g. `./backend/.env` and `./frontend/.env`) based on `.env.example`.
 
 ### 3. Running locally
 
@@ -61,7 +61,7 @@ npm start
 
 By default, the project runs with the following values:
 - Frontend: http://localhost:3000 (fixed, cannot be changed via `.env`)
-- Backend: http://localhost:3001 (can be changed via `backend/.env`)
+- Backend: http://localhost:3001 (can be changed via `backend/.env`, but the value must match the one used in `frontend/.env`)
 
 ## Project structure
 
@@ -83,6 +83,7 @@ project/
  │   │   ├── pages/
  │   │   ├── utils/
  │   │   ├── index.css
- │   │   └── index.js
+ │   │   ├── index.js
+ │   │   └── .env.example
  │   └── ...
  └── README.md
