@@ -46,6 +46,13 @@
   }
 }
 
+.breadcrumb-link:hover,
+.breadcrumb-link:focus,
+.breadcrumb-link:active {
+  color: #04BF94;
+  text-decoration: underline;
+}
+
 .breadcrumb-icon {
   color: #91A0B6;
   transform: rotate(180deg);

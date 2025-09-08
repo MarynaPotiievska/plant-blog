@@ -64,6 +64,13 @@
   display: block;
 }
 
+.link:hover,
+.link:focus,
+.link:active {
+  color: #04BF94;
+  text-decoration: underline;
+}
+
 .text {
   @media screen and (max-width: 480px) {
     max-width: 215px;

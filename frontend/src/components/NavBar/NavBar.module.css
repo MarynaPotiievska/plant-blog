@@ -13,12 +13,19 @@
   line-height: 1.5;
 }
 
-a {
+.link a {
   display: inline-block;
   height: 100%;
   color: #262626;
 }
 
-svg {
+.link a:hover,
+.link a:focus,
+.link a:active {
+  color: #04BF94;
+  text-decoration: underline;
+}
+
+.link svg {
   display: block;
 }
